@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style media="screen">
+
+    html {
+      background: #000;
+    }
+    body {
+      width: 1440px;
+      height: 900px;
+      margin: 0 auto;
+      position: relative;
+      background: #FFA2AD;
+    }
+
+      section {
+        width: 1440px;
+        height: 900px;
+        display: flex;
+        flex-direction: row;
+      }
+
+      /* .pink {
+        width: 480px;
+        height: 450px;
+        background: #FFA2AD;
+      } */
+
+      .red {
+        width: 480px;
+        height: 450px;
+        background: #9D1E16;
+      }
+
+      .yellow {
+        width: 480px;
+        height: 450px;
+        background: #FFBD3C;
+        margin: 0;
+      }
+
+      .yellow1 {
+        width: 480px;
+        height: 450px;
+        background: #FFBD3C;
+        margin: 0;
+        z-index: 2;
+        position: relative;
+        animation-name: growth;
+        animation-delay: 1s;
+        animation-duration: 2s;
+        animation-timing-function: ease-in;
+      }
+
+      @keyframes growth {
+        0% {height: 450px;
+        }
+        10% {height: 150px;
+        }
+        100% {height: 1000px;
+        }
+      }
+
+      .black {
+        width: 480px;
+        height: 450px;
+        background: #000;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .container1 {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .container2 {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .container3 {
+        width: 450px;
+        height: 150px;
+        margin-left: 15px;
+        /* position: absolute; */
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+      }
+
+      .container4 {
+        width: 450px;
+        height: 150px;
+        margin-left: 15px;
+        /* position: absolute; */
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+      }
+      .container5 {
+        width: 450px;
+        height: 150px;
+        margin-left: 15px;
+        /* position: absolute; */
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+      }
+
+      /* .container2 {
+        width: 450px;
+        height: 150px;
+        margin-left: 15px;
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+      }
+
+      .container3 {
+        width: 450px;
+        height: 150px;
+        margin-left: 15px;
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+      }
+
+      .container4 {
+        width: 450px;
+        height: 150px;
+        margin-left: 15px;
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+      } */
+
+      .circle {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: #FFBD3C;
+        z-index: 1;
+        /* margin-left: 280px; */
+        margin-top: 50px;
+        position: relative;
+        animation-name: moveout;
+        animation-duration: .5s;
+        animation-timing-function: ease-in-out;
+      }
+
+      @keyframes moveout {
+        0% { left: 280px;
+        }
+        100% { left: 0px;
+        }
+      }
+      .circle1 {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: #FFBD3C;
+        z-index: 1;
+        position: relative;
+        animation-name: movein;
+        animation-delay: .5s;
+        animation-duration: .5s;
+        animation-timing-function: ease-in-out;
+      }
+
+      @keyframes movein {
+        0% { left: 0px;
+        }
+        100% { left: 280px;
+        }
+      }
+
+      .box {
+        width: 240px;
+        height: 225px;
+        margin-top: 112.5px;
+        margin-left: 120px;
+        position: relative;
+        background: #FFA2AD;
+        animation-name: shape;
+        animation-delay: 1.5s;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-out;
+      }
+
+      @keyframes shape {
+        0% { width: 240px; height: 225px;
+        }
+        100% { transform: scale(2);
+        }
+      }
+
+      .round {
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        background: #9D1E16;
+        margin-top: 50px;
+        margin-left: 65px;
+      }
+
+      .halfcircle {
+        width: 350px;
+        height: 175px;
+        border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+        background: #FFA2AD;
+        animation-name: rotate;
+        animation-delay: 3s;
+        animation-duration: 2s;
+      }
+
+      @keyframes rotate {
+        0% { transform: rotate(180deg);
+        }
+      }
+      .stroke {
+        width: 50px;
+        height: 150px;
+        margin-left: auto;
+        margin-right: 0;
+        background: #FFBD3C;
+        animation-name: lenght;
+        animation-delay: 4.5s;
+        animation-duration: .5s;
+        animation-timing-function: ease-in-out;
+      }
+
+      @keyframes lenght {
+        0% { width: 50px;
+        }
+        70% { width: 480px;
+        }
+        100% { width: 0px;
+        }
+      }
+
+      .stroke1 {
+        width: 50px;
+        height: 150px;
+        margin-left: auto;
+        margin-right: 0;
+        background: #FFBD3C;
+        animation-name: lenght1;
+        animation-delay: 4.75s;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+      }
+
+      @keyframes lenght1 {
+        0% { width: 50px;
+        }
+        70% { width: 480px;
+        }
+        100% { width: 0px;
+        }
+      }
+
+      .stroke2 {
+        width: 50px;
+        height: 150px;
+        margin-left: auto;
+        margin-right: 0;
+        background: #FFBD3C;
+        animation-name: lenght2;
+        animation-delay: 5s;
+        animation-duration: .5s;
+        animation-timing-function: ease-in-out;
+      }
+
+      @keyframes lenght2 {
+        0% { width: 50px;
+        }
+        70% { width: 480px;
+        }
+        100% { width: 0px;
+        }
+      }
+
+      .dot {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #000;
+        margin: 50px;
+        animation-name: big;
+        animation-delay: 4s;
+        animation-duration: 2s;
+      }
+
+      @keyframes big {
+        0%{transform: none;
+        }
+        100%{transform: scale(2);
+        }
+      }
+
+  </style>
+  <body>
+    <section>
+      <div class="container">
+        <!-- <div class="pink"> -->
+          <div class="circle"></div>
+          <div class="circle1"></div>
+        <!-- </div> -->
+        <div class="yellow1"></div>
+      </div>
+      <div class="container1">
+        <div class="red">
+          <div class="box"></div>
+        </div>
+        <div class="black">
+          <div class="round">
+            <div class="halfcircle"></div>
+          </div>
+        </div>
+      </div>
+      <div class="container2">
+        <div class="yellow">
+          <div class="container3">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+          <div class="container4">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+          <div class="container5">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+        <div class="pink">
+          <div class="stroke"></div>
+          <div class="stroke1"></div>
+          <div class="stroke2"></div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
